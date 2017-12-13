@@ -1,0 +1,16 @@
+{
+  "name": "rx-training",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "takeo asai",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^21.1.8",
+    "ts-jest": "^21.2.4",
+    "webpack": "^3.10.0"
+  }
+}
