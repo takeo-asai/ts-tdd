@@ -5,12 +5,18 @@
   "author": "takeo asai",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
+    "start": "node dist/bundle.js",
+    "build": "webpack --colors",
     "test": "jest"
   },
   "devDependencies": {
     "@types/jest": "^21.1.8",
+    "@types/node": "^8.0.58",
+    "@types/webpack": "^3.8.1",
     "ts-jest": "^21.2.4",
+    "ts-loader": "^3.2.0",
+    "ts-node": "^4.0.1",
+    "typescript": "^2.6.2",
     "webpack": "^3.10.0"
   }
 }
