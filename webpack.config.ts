@@ -1,31 +1,31 @@
-import * as webpack from 'webpack';
-import * as path from 'path';
+import * as webpack from "webpack";
+import * as path from "path";
 
 const config: webpack.Configuration = {
-    entry: './src/index.ts',
-    devtool: 'inline-source-map',
+    devtool: "inline-source-map",
+    entry: "./src/index.ts",
     module: {
         rules: [
             {
+                exclude: /node_modules/,
                 test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/
+                use: "ts-loader",
             },
             {
-                enforce: 'pre',
-                test: /\.tsx?$/,
+                enforce: "pre",
                 exclude: /node_modules/,
-                loader: 'tslint-loader'
+                test: /\.tsx?$/,
+                loader: "tslint-loader",
             },
-        ]
+        ],
     },
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js' ]
+        extensions: [".tsx", ".ts", ".js"],
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
-    }
+        filename: "bundle.js",
+        path: path.resolve(__dirname, "dist"),
+    },
 };
 
 export default config;
