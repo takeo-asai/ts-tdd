@@ -1,4 +1,4 @@
-console.log('hello world?');
+import sum from "./sum";
 
-let a: string = "abc";
-
+console.log('hello world!');
+console.log('2+3 =' + sum(2, 3));

@@ -1,5 +1,20 @@
 {
-  "name": "rx-training",
+  "name": "ts-jest",
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
   "version": "1.0.0",
   "main": "index.js",
   "author": "takeo asai",
@@ -7,12 +22,13 @@
   "scripts": {
     "start": "node dist/bundle.js",
     "build": "webpack --colors",
-    "test": "jest"
+    "test": "jest --runInBand"
   },
   "devDependencies": {
     "@types/jest": "^21.1.8",
     "@types/node": "^8.0.58",
     "@types/webpack": "^3.8.1",
+    "jest": "^21.2.1",
     "ts-jest": "^21.2.4",
     "ts-loader": "^3.2.0",
     "ts-node": "^4.0.1",
