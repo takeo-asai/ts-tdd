@@ -1,5 +1,5 @@
-import * as webpack from "webpack";
 import * as path from "path";
+import * as webpack from "webpack";
 
 const config: webpack.Configuration = {
     devtool: "inline-source-map",
@@ -14,17 +14,17 @@ const config: webpack.Configuration = {
             {
                 enforce: "pre",
                 exclude: /node_modules/,
-                test: /\.tsx?$/,
                 loader: "tslint-loader",
+                test: /\.tsx?$/,
             },
         ],
-    },
-    resolve: {
-        extensions: [".tsx", ".ts", ".js"],
     },
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
+    },
+    resolve: {
+        extensions: [".tsx", ".ts", ".js"],
     },
 };
 
