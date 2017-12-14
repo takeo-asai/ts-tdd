@@ -21,9 +21,10 @@
   "license": "MIT",
   "scripts": {
     "start": "node dist/bundle.js",
+    "clean": "rm -rf ./node_modules ./dist",
     "build": "webpack --colors",
-    "test": "jest --runInBand"
-  },
+    "test": "jest --colors --runInBand"
+},
   "devDependencies": {
     "@types/jest": "^21.1.8",
     "@types/node": "^8.0.58",
