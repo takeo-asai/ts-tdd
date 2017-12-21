@@ -1,5 +1,5 @@
 {
-  "name": "ts-jest",
+  "name": "ts-tdd",
   "jest": {
     "verbose": true,
     "transform": {
